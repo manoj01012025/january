@@ -1,0 +1,31 @@
+table Table
+	lineageTag: ee9bdf3b-7430-4830-a90c-32e80b5fa3c3
+
+	column Email
+		dataType: string
+		lineageTag: 7b4f3e82-435e-411a-95a7-b6834c43fe18
+		summarizeBy: none
+		sourceColumn: Email
+
+		annotation SummarizationSetBy = Automatic
+
+	column Phone
+		dataType: int64
+		formatString: 0
+		lineageTag: 54d3b149-5a1d-4243-89e2-9970a8a1d9d0
+		summarizeBy: sum
+		sourceColumn: Phone
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Table = m
+		mode: import
+		source =
+				let
+				    Source = Table.FromRows(Json.Document(Binary.Decompress(Binary.FromText("jY69CoMwGEXf5XO1IT/Wxi0O7h06FIIUE9MSMEaSWOnbV6QgOHU+5x6ulPA+OTVHG0zff4SzOvjonwlp7yCHikCbS9gNfMFcvFxnh5/BGeWbQ6qyIjUu6nKtpIg6jey4CmeGD/yx86y53zKhbJfsNCxqMbOakB+PNyhjW+PqFxMIZX8sMC2gbb8=", BinaryEncoding.Base64), Compression.Deflate)), let _t = ((type nullable text) meta [Serialized.Text = true]) in type table [Email = _t, Phone = _t]),
+				    #"Changed Type" = Table.TransformColumnTypes(Source,{{"Email", type text}, {"Phone", Int64.Type}})
+				in
+				    #"Changed Type"
+
+	annotation PBI_ResultType = Table
+

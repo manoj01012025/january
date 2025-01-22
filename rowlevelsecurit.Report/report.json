@@ -1,0 +1,42 @@
+{
+  "config": "{\"version\":\"5.57\",\"themeCollection\":{\"baseTheme\":{\"name\":\"CY24SU08\",\"version\":\"5.57\",\"type\":2}},\"activeSectionIndex\":0,\"defaultDrillFilterOtherVisuals\":true,\"settings\":{\"useNewFilterPaneExperience\":true,\"allowChangeFilterTypes\":true,\"useStylableVisualContainerHeader\":true,\"queryLimitOption\":6,\"exportDataMode\":1,\"useDefaultAggregateDisplayName\":true},\"objects\":{\"section\":[{\"properties\":{\"verticalAlignment\":{\"expr\":{\"Literal\":{\"Value\":\"'Top'\"}}}}}]}}",
+  "layoutOptimization": 0,
+  "resourcePackages": [
+    {
+      "resourcePackage": {
+        "disabled": false,
+        "items": [
+          {
+            "name": "CY24SU08",
+            "path": "BaseThemes/CY24SU08.json",
+            "type": 202
+          }
+        ],
+        "name": "SharedResources",
+        "type": 2
+      }
+    }
+  ],
+  "sections": [
+    {
+      "config": "{}",
+      "displayName": "Page 1",
+      "displayOption": 1,
+      "filters": "[]",
+      "height": 720.00,
+      "name": "eab4e8d330d1ee93ac5b",
+      "visualContainers": [
+        {
+          "config": "{\"name\":\"61b53e979e05e40e621a\",\"layouts\":[{\"id\":0,\"position\":{\"x\":56.413373860182375,\"y\":73.9209726443769,\"z\":0,\"width\":823.8297872340426,\"height\":557.3252279635259,\"tabOrder\":0}}],\"singleVisual\":{\"visualType\":\"tableEx\",\"projections\":{\"Values\":[{\"queryRef\":\"Table.Email\"},{\"queryRef\":\"Sum(Table.Phone)\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"t\",\"Entity\":\"Table\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"t\"}},\"Property\":\"Email\"},\"Name\":\"Table.Email\",\"NativeReferenceName\":\"Email\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"t\"}},\"Property\":\"Phone\"}},\"Function\":0},\"Name\":\"Sum(Table.Phone)\",\"NativeReferenceName\":\"Sum of Phone\"}]},\"drillFilterOtherVisuals\":true}}",
+          "filters": "[]",
+          "height": 557.33,
+          "width": 823.83,
+          "x": 56.41,
+          "y": 73.92,
+          "z": 0.00
+        }
+      ],
+      "width": 1280.00
+    }
+  ]
+}

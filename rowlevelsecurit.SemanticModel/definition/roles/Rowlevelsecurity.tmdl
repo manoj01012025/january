@@ -1,0 +1,7 @@
+role Rowlevelsecurity
+	modelPermission: read
+
+	tablePermission Table = [Email] ==USERPRINCIPALNAME()
+
+	annotation PBI_Id = 0dfeedb9a50d4826b827ae8aa9aaf520
+

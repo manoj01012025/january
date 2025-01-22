@@ -1,0 +1,7 @@
+role Rls1
+	modelPermission: read
+
+	tablePermission Table = [User ID]=USERPRINCIPALNAME()
+
+	annotation PBI_Id = bb7a7e12e7e24f409950aab99cc37f6f
+

@@ -1,0 +1,46 @@
+table Document1
+	lineageTag: 6767cea5-2a8e-4f58-9960-a87acce99c92
+
+	column Column1
+		dataType: string
+		lineageTag: 5d9cb9af-49b8-4a06-99a9-a9b975fe1c99
+		summarizeBy: none
+		sourceColumn: Column1
+
+		annotation SummarizationSetBy = Automatic
+
+	column Column2
+		dataType: string
+		lineageTag: 5b4557d2-de0a-423d-9435-253efa91a3f6
+		summarizeBy: none
+		sourceColumn: Column2
+
+		annotation SummarizationSetBy = Automatic
+
+	column Column3
+		dataType: string
+		lineageTag: 67c98e05-0ff9-474f-bd7b-3962075d21f3
+		summarizeBy: none
+		sourceColumn: Column3
+
+		annotation SummarizationSetBy = Automatic
+
+	column Column4
+		dataType: string
+		lineageTag: 1cc4efdb-9e9d-45f7-9f96-9c9988b29297
+		summarizeBy: none
+		sourceColumn: Column4
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Document1 = m
+		mode: import
+		source =
+				let
+				    Source = Csv.Document(Web.Contents("https://microsoftapc-my.sharepoint.com/personal/v-mbusireddy_microsoft_com/Documents/Document1.csv"),[Delimiter=",", Columns=4, Encoding=65001, QuoteStyle=QuoteStyle.None]),
+				    #"Changed Type" = Table.TransformColumnTypes(Source,{{"Column1", type text}, {"Column2", type text}, {"Column3", type text}, {"Column4", type text}})
+				in
+				    #"Changed Type"
+
+	annotation PBI_ResultType = Table
+

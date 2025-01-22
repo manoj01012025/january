@@ -1,0 +1,43 @@
+table 'Table (2)'
+	lineageTag: 3da30402-adae-453e-9165-61bfec33298e
+
+	column ID
+		dataType: double
+		formatString: 0
+		lineageTag: 1858a0c3-04e0-4525-ba09-d7ac33026c7a
+		summarizeBy: none
+		sourceColumn: ID
+
+		annotation SummarizationSetBy = Automatic
+
+	column Country
+		dataType: string
+		lineageTag: 9cd79f9c-1eb6-4bb8-9b56-97bebf90fc22
+		summarizeBy: none
+		sourceColumn: Country
+
+		annotation SummarizationSetBy = Automatic
+
+	column City
+		dataType: string
+		lineageTag: 73619cee-af3c-4212-be17-4f3db3f07a32
+		summarizeBy: none
+		sourceColumn: City
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'Table (2)' = m
+		mode: import
+		source =
+				let
+				    Source = Table.FromRows(Json.Document(Binary.Decompress(Binary.FromText("i45WMlTSUfLMS8lMBNIuqTkZmUBaKVYnWskIyAgNdgSSzok5mWn5RXlgNWA5JD2+pblJiRBNsQA=", BinaryEncoding.Base64), Compression.Deflate)), let _t = ((type nullable text) meta [Serialized.Text = true]) in type table [ID = _t, Country = _t, City = _t, h = _t]),
+				    #"Changed Type" = Table.TransformColumnTypes(Source,{{"ID", Int64.Type}, {"Country", type text}, {"City", type text}, {"h", type text}}),
+				    #"Removed Columns" = Table.RemoveColumns(#"Changed Type",{"h"}),
+				    #"Replaced Value" = Table.ReplaceValue(#"Removed Columns",null,1,Replacer.ReplaceValue,{"ID"})
+				in
+				    #"Replaced Value"
+
+	annotation PBI_ResultType = Table
+
+	annotation PBI_NavigationStepName = Navigation
+

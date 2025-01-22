@@ -1,0 +1,4 @@
+relationship 376c9c37-8e74-0514-ed43-30d2d63ecf54
+	fromColumn: 'Table (2)'.ID
+	toColumn: Table.ID
+
