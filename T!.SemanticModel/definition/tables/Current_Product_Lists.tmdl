@@ -1,0 +1,34 @@
+table Current_Product_Lists
+	lineageTag: fcec35e4-8eea-4b07-ba85-25b3cca9c702
+	sourceLineageTag: [dbo].[Current_Product_Lists]
+
+	column ProductID
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: c743d6ca-b09d-4feb-b010-15cc7bb4e9ee
+		sourceLineageTag: ProductID
+		summarizeBy: count
+		sourceColumn: ProductID
+
+		annotation SummarizationSetBy = Automatic
+
+	column ProductName
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 5a7a2626-cd49-4220-85b4-858789133e92
+		sourceLineageTag: ProductName
+		summarizeBy: none
+		sourceColumn: ProductName
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Current_Product_Lists = entity
+		mode: directLake
+		source
+			entityName: Current_Product_Lists
+			schemaName: dbo
+			expressionSource: DatabaseQuery
+
+	annotation PBI_ResultType = Table
+

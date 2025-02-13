@@ -1,0 +1,44 @@
+table Categories
+	lineageTag: a4856da6-947b-4db0-a3ce-869d7be243f5
+	sourceLineageTag: [dbo].[Categories]
+
+	column CategoryID
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: c5988bff-aff1-4c38-b4b3-80503f41a7ec
+		sourceLineageTag: CategoryID
+		summarizeBy: count
+		sourceColumn: CategoryID
+
+		annotation SummarizationSetBy = Automatic
+
+	column CategoryName
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: d796ea06-15d8-4c5b-b504-d4c88831358d
+		sourceLineageTag: CategoryName
+		summarizeBy: none
+		sourceColumn: CategoryName
+
+		annotation SummarizationSetBy = Automatic
+
+	column Description
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: ae0f76c6-94b7-4d34-be3e-c2bc43cabcd0
+		sourceLineageTag: Description
+		summarizeBy: none
+		sourceColumn: Description
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Categories = entity
+		mode: directLake
+		source
+			entityName: Categories
+			schemaName: dbo
+			expressionSource: DatabaseQuery
+
+	annotation PBI_ResultType = Table
+

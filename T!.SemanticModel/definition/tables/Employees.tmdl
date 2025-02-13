@@ -1,0 +1,165 @@
+table Employees
+	lineageTag: 02b4e1e8-8aaf-462f-858b-8bcaf470fe58
+	sourceLineageTag: [dbo].[Employees]
+
+	column EmployeeID
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: f0b87619-08eb-407b-8f8a-081ae77cdede
+		sourceLineageTag: EmployeeID
+		summarizeBy: count
+		sourceColumn: EmployeeID
+
+		annotation SummarizationSetBy = Automatic
+
+	column LastName
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 4bd68d07-13da-45be-bdac-f5a83605de8b
+		sourceLineageTag: LastName
+		summarizeBy: none
+		sourceColumn: LastName
+
+		annotation SummarizationSetBy = Automatic
+
+	column FirstName
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 8d6c2bdf-1180-4f43-94a8-3eb0a9a34c4a
+		sourceLineageTag: FirstName
+		summarizeBy: none
+		sourceColumn: FirstName
+
+		annotation SummarizationSetBy = Automatic
+
+	column Title
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 717b8c1f-4cfa-432b-bb9f-939b9469e150
+		sourceLineageTag: Title
+		summarizeBy: none
+		sourceColumn: Title
+
+		annotation SummarizationSetBy = Automatic
+
+	column TitleOfCourtesy
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: b76f673b-62d4-40be-877d-446c3e76d181
+		sourceLineageTag: TitleOfCourtesy
+		summarizeBy: none
+		sourceColumn: TitleOfCourtesy
+
+		annotation SummarizationSetBy = Automatic
+
+	column Address
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: f10211a8-ceb5-4553-8d37-3f022d28d360
+		sourceLineageTag: Address
+		summarizeBy: none
+		sourceColumn: Address
+
+		annotation SummarizationSetBy = Automatic
+
+	column City
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 3b54404b-7eea-45f0-b9c6-c941fa008eaa
+		sourceLineageTag: City
+		summarizeBy: none
+		sourceColumn: City
+
+		annotation SummarizationSetBy = Automatic
+
+	column Region
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: ae2459d1-a530-4cf5-b086-8a8a34dd0926
+		sourceLineageTag: Region
+		summarizeBy: none
+		sourceColumn: Region
+
+		annotation SummarizationSetBy = Automatic
+
+	column PostalCode
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: ef81eaf8-b380-4a2f-9a42-ab529a756a7f
+		sourceLineageTag: PostalCode
+		summarizeBy: none
+		sourceColumn: PostalCode
+
+		annotation SummarizationSetBy = Automatic
+
+	column Country
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: b3141003-e33b-4c0f-8b12-6222f092e5c0
+		sourceLineageTag: Country
+		summarizeBy: none
+		sourceColumn: Country
+
+		annotation SummarizationSetBy = Automatic
+
+	column HomePhone
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 0388bc4e-be9f-407b-b294-bbe3918a2807
+		sourceLineageTag: HomePhone
+		summarizeBy: none
+		sourceColumn: HomePhone
+
+		annotation SummarizationSetBy = Automatic
+
+	column Extension
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 4532e87e-6d59-4f98-999b-f0703faa477b
+		sourceLineageTag: Extension
+		summarizeBy: none
+		sourceColumn: Extension
+
+		annotation SummarizationSetBy = Automatic
+
+	column Notes
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 6933098b-5c78-4058-9e5c-bf2ed62e5558
+		sourceLineageTag: Notes
+		summarizeBy: none
+		sourceColumn: Notes
+
+		annotation SummarizationSetBy = Automatic
+
+	column ReportsTo
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 4ad2ab8a-5326-4668-a337-f5bd45e9f185
+		sourceLineageTag: ReportsTo
+		summarizeBy: sum
+		sourceColumn: ReportsTo
+
+		annotation SummarizationSetBy = Automatic
+
+	column PhotoPath
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 0a390ac5-e31b-47b5-8731-b6177e75141b
+		sourceLineageTag: PhotoPath
+		summarizeBy: none
+		sourceColumn: PhotoPath
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Employees = entity
+		mode: directLake
+		source
+			entityName: Employees
+			schemaName: dbo
+			expressionSource: DatabaseQuery
+
+	annotation PBI_ResultType = Table
+

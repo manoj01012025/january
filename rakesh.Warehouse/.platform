@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "Warehouse",
+    "displayName": "rakesh"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "5693c39e-faa9-a1f9-4d72-84d67ea55111"
+  }
+}

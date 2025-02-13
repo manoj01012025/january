@@ -1,0 +1,26 @@
+model Model
+	culture: en-US
+	collation: Latin1_General_100_BIN2_UTF8
+	defaultPowerBIDataSourceVersion: powerBI_V3
+	sourceQueryCulture: en-US
+	dataAccessOptions
+		legacyRedirects
+		returnErrorValuesAsNull
+
+annotation __PBI_TimeIntelligenceEnabled = 0
+
+annotation PBIDesktopVersion = 2.139.7496.1 (Main)+061188de2d27b556d0c15d8f70c4426f68783390
+
+annotation PBI_QueryOrder = ["DatabaseQuery"]
+
+ref table Alphabetical_list_of_products
+ref table Category_Sales_for_1997
+ref table CustomerDemographics
+ref table Categories
+ref table Customer_and_Suppliers_by_Cities
+ref table Employees
+ref table Current_Product_Lists
+ref table Customers
+
+ref cultureInfo en-US
+

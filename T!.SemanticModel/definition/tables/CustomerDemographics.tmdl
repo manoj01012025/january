@@ -1,0 +1,33 @@
+table CustomerDemographics
+	lineageTag: 4cd78910-be9a-44c2-8b6f-ef6215c126ca
+	sourceLineageTag: [dbo].[CustomerDemographics]
+
+	column CustomerTypeID
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 0e7000aa-7a7e-40e8-82dd-cb792d39a39e
+		sourceLineageTag: CustomerTypeID
+		summarizeBy: none
+		sourceColumn: CustomerTypeID
+
+		annotation SummarizationSetBy = Automatic
+
+	column CustomerDesc
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 2a19fa60-f8fd-46fd-be2b-3c2bec893f67
+		sourceLineageTag: CustomerDesc
+		summarizeBy: none
+		sourceColumn: CustomerDesc
+
+		annotation SummarizationSetBy = Automatic
+
+	partition CustomerDemographics = entity
+		mode: directLake
+		source
+			entityName: CustomerDemographics
+			schemaName: dbo
+			expressionSource: DatabaseQuery
+
+	annotation PBI_ResultType = Table
+

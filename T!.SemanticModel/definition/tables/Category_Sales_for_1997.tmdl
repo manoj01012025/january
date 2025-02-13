@@ -1,0 +1,35 @@
+table Category_Sales_for_1997
+	lineageTag: 88894ef3-d18f-4678-92f8-725da057515d
+	sourceLineageTag: [dbo].[Category_Sales_for_1997]
+
+	column CategoryName
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 8b0ea57e-f9f7-4b0b-8890-6941c48f991c
+		sourceLineageTag: CategoryName
+		summarizeBy: none
+		sourceColumn: CategoryName
+
+		annotation SummarizationSetBy = Automatic
+
+	column CategorySales
+		dataType: double
+		sourceProviderType: decimal(38, 6)
+		lineageTag: 4231012f-326c-4d80-8785-eda8c0312db5
+		sourceLineageTag: CategorySales
+		summarizeBy: sum
+		sourceColumn: CategorySales
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	partition Category_Sales_for_1997 = entity
+		mode: directLake
+		source
+			entityName: Category_Sales_for_1997
+			schemaName: dbo
+			expressionSource: DatabaseQuery
+
+	annotation PBI_ResultType = Table
+

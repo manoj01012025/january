@@ -1,0 +1,132 @@
+table Alphabetical_list_of_products
+	lineageTag: 72e226f5-f958-485c-a5b5-39e18ae7e160
+	sourceLineageTag: [dbo].[Alphabetical_list_of_products]
+
+	column ProductID
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 382ce878-b091-4c05-99c5-2b1318058f3d
+		sourceLineageTag: ProductID
+		summarizeBy: count
+		sourceColumn: ProductID
+
+		annotation SummarizationSetBy = Automatic
+
+	column ProductName
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: df844094-a77a-4d8a-998b-89c9ce85f9a8
+		sourceLineageTag: ProductName
+		summarizeBy: none
+		sourceColumn: ProductName
+
+		annotation SummarizationSetBy = Automatic
+
+	column SupplierID
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 9a15efb6-c1ca-4049-a6d4-3cd353078681
+		sourceLineageTag: SupplierID
+		summarizeBy: count
+		sourceColumn: SupplierID
+
+		annotation SummarizationSetBy = Automatic
+
+	column CategoryID
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 32bc6b5b-5d1c-43c0-9697-cd3b205e0497
+		sourceLineageTag: CategoryID
+		summarizeBy: count
+		sourceColumn: CategoryID
+
+		annotation SummarizationSetBy = Automatic
+
+	column QuantityPerUnit
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 63771cf8-6639-4c35-b1b2-f395e0151cbf
+		sourceLineageTag: QuantityPerUnit
+		summarizeBy: none
+		sourceColumn: QuantityPerUnit
+
+		annotation SummarizationSetBy = Automatic
+
+	column UnitPrice
+		dataType: double
+		sourceProviderType: decimal(38, 6)
+		lineageTag: ba04657d-83d0-4d34-add7-0a76d0181b8b
+		sourceLineageTag: UnitPrice
+		summarizeBy: sum
+		sourceColumn: UnitPrice
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column UnitsInStock
+		dataType: int64
+		formatString: 0
+		sourceProviderType: smallint
+		lineageTag: 4c794206-51e1-4bff-9e22-a9994d53c6ef
+		sourceLineageTag: UnitsInStock
+		summarizeBy: sum
+		sourceColumn: UnitsInStock
+
+		annotation SummarizationSetBy = Automatic
+
+	column UnitsOnOrder
+		dataType: int64
+		formatString: 0
+		sourceProviderType: smallint
+		lineageTag: 5330c6db-7cd2-44ba-aad6-356a268bf64d
+		sourceLineageTag: UnitsOnOrder
+		summarizeBy: sum
+		sourceColumn: UnitsOnOrder
+
+		annotation SummarizationSetBy = Automatic
+
+	column ReorderLevel
+		dataType: int64
+		formatString: 0
+		sourceProviderType: smallint
+		lineageTag: 831c569b-6f38-4e1e-b5c6-daa7feb54e00
+		sourceLineageTag: ReorderLevel
+		summarizeBy: sum
+		sourceColumn: ReorderLevel
+
+		annotation SummarizationSetBy = Automatic
+
+	column Discontinued
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		sourceProviderType: bit
+		lineageTag: df8c7923-7af4-4ebe-8abd-6de75b509191
+		sourceLineageTag: Discontinued
+		summarizeBy: none
+		sourceColumn: Discontinued
+
+		annotation SummarizationSetBy = Automatic
+
+	column CategoryName
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: e68f884a-11b7-4a94-a15f-eacfeee0993b
+		sourceLineageTag: CategoryName
+		summarizeBy: none
+		sourceColumn: CategoryName
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Alphabetical_list_of_products = entity
+		mode: directLake
+		source
+			entityName: Alphabetical_list_of_products
+			schemaName: dbo
+			expressionSource: DatabaseQuery
+
+	annotation PBI_ResultType = Table
+

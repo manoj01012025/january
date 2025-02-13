@@ -1,0 +1,53 @@
+table Customer_and_Suppliers_by_Cities
+	lineageTag: c6873ec6-cd62-48b3-9c0b-1e2fdeefefdf
+	sourceLineageTag: [dbo].[Customer_and_Suppliers_by_Cities]
+
+	column City
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 786c8bf4-8f85-4bec-96fa-e730f585b1b2
+		sourceLineageTag: City
+		summarizeBy: none
+		sourceColumn: City
+
+		annotation SummarizationSetBy = Automatic
+
+	column CompanyName
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: ef244768-be55-47a9-988a-9bcaba70322d
+		sourceLineageTag: CompanyName
+		summarizeBy: none
+		sourceColumn: CompanyName
+
+		annotation SummarizationSetBy = Automatic
+
+	column ContactName
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: de407008-0807-449d-b0c1-54923e1b3160
+		sourceLineageTag: ContactName
+		summarizeBy: none
+		sourceColumn: ContactName
+
+		annotation SummarizationSetBy = Automatic
+
+	column Relationship
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 10acce27-050d-4389-a47c-3d65c471c191
+		sourceLineageTag: Relationship
+		summarizeBy: none
+		sourceColumn: Relationship
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Customer_and_Suppliers_by_Cities = entity
+		mode: directLake
+		source
+			entityName: Customer_and_Suppliers_by_Cities
+			schemaName: dbo
+			expressionSource: DatabaseQuery
+
+	annotation PBI_ResultType = Table
+
