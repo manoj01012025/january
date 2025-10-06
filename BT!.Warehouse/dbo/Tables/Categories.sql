@@ -4,4 +4,3 @@ CREATE TABLE [dbo].[Categories] (
 	[CategoryName] varchar(8000) NULL, 
 	[Description] varchar(8000) NULL
 );
-

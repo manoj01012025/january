@@ -12,4 +12,3 @@ CREATE TABLE [dbo].[Customers] (
 	[Phone] varchar(8000) NULL, 
 	[Fax] varchar(8000) NULL
 );
-

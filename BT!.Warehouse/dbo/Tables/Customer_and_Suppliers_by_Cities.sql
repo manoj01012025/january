@@ -5,4 +5,3 @@ CREATE TABLE [dbo].[Customer_and_Suppliers_by_Cities] (
 	[ContactName] varchar(8000) NULL, 
 	[Relationship] varchar(8000) NULL
 );
-

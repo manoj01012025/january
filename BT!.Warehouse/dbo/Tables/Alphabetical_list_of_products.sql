@@ -12,4 +12,3 @@ CREATE TABLE [dbo].[Alphabetical_list_of_products] (
 	[Discontinued] bit NULL, 
 	[CategoryName] varchar(8000) NULL
 );
-

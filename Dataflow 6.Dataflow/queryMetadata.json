@@ -1,70 +1,26 @@
 {
-  "lastModified": null,
-  "formatVersion": "202409",
-  "editingSession": {
-    "computeEngineSettings": {},
-    "editingSessionMashup": {
-      "mashupName": "Dataflow 6",
-      "queryGroups": [],
-      "documentLocale": "en-US",
-      "queriesMetadata": {
-        "alphabetical_list_of_products": {
-          "queryId": "b6c33676-23a5-4bd3-bb46-a2523f70447d",
-          "queryName": "Alphabetical_list_of_products",
-          "queryGroupId": null,
-          "entityName": null,
-          "lastKnownIsCalculatedEntity": null,
-          "lastKnownIsLinkedEntity": null,
-          "lastKnownIsParameter": null,
-          "isHidden": false,
-          "lastKnownResultTypeName": null,
-          "loadEnabled": true,
-          "fieldsMetadata": {},
-          "deleteExistingDataOnLoad": false,
-          "hostProperties": {},
-          "jsonOutputDestinations": null,
-          "bindToDefaultOutputDestination": null,
-          "jsonIncrementalRefreshSettings": null
-        },
-        "categories": {
-          "queryId": "b3ab9cb4-625d-43f4-9956-03fd38fd7306",
-          "queryName": "Categories",
-          "queryGroupId": null,
-          "entityName": null,
-          "lastKnownIsCalculatedEntity": null,
-          "lastKnownIsLinkedEntity": null,
-          "lastKnownIsParameter": null,
-          "isHidden": false,
-          "lastKnownResultTypeName": null,
-          "loadEnabled": true,
-          "fieldsMetadata": {},
-          "deleteExistingDataOnLoad": false,
-          "hostProperties": {},
-          "jsonOutputDestinations": null,
-          "bindToDefaultOutputDestination": null,
-          "jsonIncrementalRefreshSettings": null
-        }
-      },
-      "connectionOverrides": [
-        {
-          "path": "PowerPlatformDataflows",
-          "kind": "PowerPlatformDataflows",
-          "provider": "DmtsFabric",
-          "connectionName": "{\"ClusterId\":\"494d148f-d1b6-489e-8a9c-42b01a3fda29\",\"DatasourceId\":\"187306aa-7fc6-4db1-998e-f6afbb80ef17\"}",
-          "credentialDetails": {},
-          "connectionParameters": {},
-          "privacyGroup": "Organizational"
-        }
-      ],
-      "useHostConnectionProvider": false,
-      "fastCombine": false,
-      "allowNativeQueries": true,
-      "skipAutomaticTypeAndHeaderDetection": false,
-      "hostProperties": {
-        "dataflowRefreshOutputFileFormat": "Parquet",
-        "enableDateTimeFieldsForStaging": "true",
-        "enablePublishWithoutLoadedQueries": "true"
-      }
+  "formatVersion": "202502",
+  "computeEngineSettings": {
+    "allowFastCopy": false
+  },
+  "name": "Dataflow 6",
+  "queryGroups": [],
+  "documentLocale": "en-US",
+  "queriesMetadata": {
+    "alphabetical_list_of_products": {
+      "queryId": "b6c33676-23a5-4bd3-bb46-a2523f70447d",
+      "queryName": "Alphabetical_list_of_products"
+    },
+    "categories": {
+      "queryId": "b3ab9cb4-625d-43f4-9956-03fd38fd7306",
+      "queryName": "Categories"
     }
-  }
+  },
+  "connections": [
+    {
+      "path": "PowerPlatformDataflows",
+      "kind": "PowerPlatformDataflows",
+      "connectionId": "{\"ClusterId\":\"494d148f-d1b6-489e-8a9c-42b01a3fda29\",\"DatasourceId\":\"187306aa-7fc6-4db1-998e-f6afbb80ef17\"}"
+    }
+  ]
 }

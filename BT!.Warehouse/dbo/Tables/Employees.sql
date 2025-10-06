@@ -16,4 +16,3 @@ CREATE TABLE [dbo].[Employees] (
 	[ReportsTo] int NULL, 
 	[PhotoPath] varchar(8000) NULL
 );
-
