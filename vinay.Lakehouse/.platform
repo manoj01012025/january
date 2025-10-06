@@ -2,10 +2,10 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
   "metadata": {
     "type": "Lakehouse",
-    "displayName": "vinay"
+    "displayName": "vinay2"
   },
   "config": {
     "version": "2.0",
-    "logicalId": "453f95fc-180b-83c2-44ba-132c5f47545c"
+    "logicalId": "453f95fc-180b-83c2-44ba-132c5f47541d"
   }
 }
